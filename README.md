@@ -17,5 +17,13 @@ os-simple-shell
 增加的功能:  
 1. 有部分指令可以直接在終端機使用(ex.ls'clear'exit'ps axe)   
 
-os-master-slave  
+os-share memory
 
+1. 編譯 p1 輸入 gcc p1.c -o p1
+2. 編譯 p2 輸入 gcc p2.c -o p2
+3. 先執行有|IPC_CREAT 的 p2 輸入 ./p2 
+4. 再執行p1 輸入 ./p1
+5. 再 p1 視窗輸入兩數字(中間加入空格)
+6. 在 p2 會接收並計算
+7. 完成後會放在 share memory 而 p1 會將內容輸出
+8. 在 p1 視窗中輸入 quit 會跳出程式 
